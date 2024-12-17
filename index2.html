@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML Practice</title>
+        <style>
+            .blackout {
+              background:white;
+            }
+            .response {
+                color: white;
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML Practice</h1>
+        <p class="response">
+            If just being born is the greatest act of creation, then <i>what are you supposed to do after that?</i> <br>
+            Isn't <b>everything</b> that comes next sort of a <b>disappointment?</b> <br>
+            Slowly <strike>decaying</strike> <span class="blackout">rotting</span> entropying until we devolve into a pile of mush? <br>
+        </p>
+        <form id="practiceForm">
+            <input type="radio" name="option" id="glob" value="glob">
+            <label for="glob">Well, it's not enough to have created something amazing, right?</label><br>
+            <input type="radio" name="option" id="what" value="what">
+            <label for="what">Uh, what?</label><br><br>
+            <input type="button" value="Submit" onclick="showResponse()">
+        </form>
+        <p id="displayText" class="blackout response"></p>
+    </body>
+</html>
+<script>
+function showResponse() {
+    const form = document.getElementById('practiceForm');
+    const selectedOption = form.elements['option'].value;
+    const displayText = document.getElementById('displayText');
+
+    if (selectedOption == "glob") {
+        displayText.textContent = "Is it though?";
+    } else if (selectedOption == "what"){
+        displayText.textContent = "idk.";
+    } else {
+        displayText.textContent = "You didn't even pick one.";
+    }
+}
+
+</script>

@@ -1,0 +1,41 @@
+body {
+    background: #222222;
+    color: rgb(214, 214, 214);
+    font-size: large;
+}
+h1 {
+    text-align: center;
+}
+.story {
+    animation: fadeIn 4s forwards;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+button {
+    background-color: #646464; /* Green */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin: 8px;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+@keyframes wiggle {
+    0% { transform: translateX(0); }
+   20% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+.wiggle {
+  display: inline-block;
+  animation: wiggle 2.5s infinite;
+}
+
+.wiggle:hover {
+  animation: none;
+}
